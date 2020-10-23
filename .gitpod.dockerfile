@@ -3,15 +3,7 @@ FROM buildpack-deps:latest
 
 ### base ###
 RUN apt-get install -yq \
-        build-essential \
-        htop \
-        jq \
-        less \
-        llvm \
-        locales \
-        man-db \
         nano \
-        software-properties-common \
         sudo \
     && locale-gen en_US.UTF-8 \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
