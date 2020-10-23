@@ -10,5 +10,6 @@ RUN apt-get update && apt-get install -y \
     && sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/*
 
 ### Python ###
+RUN sudo apt install python3.9
 
 
