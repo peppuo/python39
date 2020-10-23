@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
 
 ### Python ###
 ENV PATH=$HOME/.pyenv/bin:$HOME/.pyenv/shims:$PATH
+RUN sudo echo "Set disable_coredump false" >> /etc/sudo.conf
 RUN sudo curl -fsSL https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash \
     && { echo; \
         echo 'eval "$(pyenv init -)"'; \
