@@ -2,7 +2,8 @@ FROM buildpack-deps:latest
 ### cosmic
 
 ### base ###
-RUN apt-get install -yq \
+RUN yes | unminimize \
+    && apt-get install -yq \
         nano \
         sudo \
     && locale-gen en_US.UTF-8 \
