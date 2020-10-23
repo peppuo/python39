@@ -3,13 +3,13 @@ FROM gitpod/workspace-full:latest
 # Use root user
 USER root
 RUN apt-get update && apt-get install -y \
+    && echo "Set disable_coredump false" >> /etc/sudo.conf
     # Clean-up
     && sudo apt-get clean \
     && sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/*
 
 ### Python ###
 ENV PATH=$HOME/.pyenv/bin:$HOME/.pyenv/shims:$PATH
-RUN sudo echo "Set disable_coredump false" >> /etc/sudo.conf
 RUN sudo curl -fsSL https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash \
     && { echo; \
         echo 'eval "$(pyenv init -)"'; \
