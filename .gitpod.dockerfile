@@ -1,7 +1,7 @@
 FROM buildpack-deps:latest 
 ### cosmic
 
-RUN apt-get install sudo nano
+RUN apt-get install sudo nano \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
     
     
