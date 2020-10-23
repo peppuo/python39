@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     && sudo add-apt-repository ppa:deadsnakes/ppa \
     && sudo apt-get install -y software-properties-common \
     && sudo apt update \
+    && sudo apt-get upgrade -y \
     # Clean-up
     && sudo apt-get clean \
     && sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/*
