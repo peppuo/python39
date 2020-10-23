@@ -1,7 +1,10 @@
 FROM buildpack-deps:latest 
 ### cosmic
 
-
+RUN apt-get install sudo nano
+    && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
+    
+    
 ### Gitpod user ###
 # '-l': see https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#user
 RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod \
