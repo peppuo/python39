@@ -5,6 +5,7 @@ USER root
 RUN echo "Set disable_coredump false" >> /etc/sudo.conf
 RUN apt-get update && apt-get install -y \
     && sudo add-apt-repository ppa:deadsnakes/ppa \
+    && sudo apt-get install -y software-properties-common \
     && sudo apt update \
     # Clean-up
     && sudo apt-get clean \
@@ -12,10 +13,7 @@ RUN apt-get update && apt-get install -y \
 
 ### Python ###
 RUN sudo apt update -y \
-    && sudo apt-get install -y software-properties-common \
-#     && sudo add-apt-repository ppa:fkrull/deadsnakes \
-    && sudo apt update -y \
-    && sudo apt install python3.9
+    && sudo apt-get install -y python3.9
     
     
 
