@@ -11,6 +11,8 @@ RUN apt-get update && apt-get install -y \
     && sudo apt-get clean \
     && sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/*
 
+RUN echo "\n\n ECHO POINT \n\n"
+
 ### Python ###
 RUN sudo apt update -y \
     && sudo apt-get install -y python3.9
