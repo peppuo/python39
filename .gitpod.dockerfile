@@ -3,8 +3,6 @@ FROM buildpack-deps:latest
 
 ### base ###
 RUN apt-get install -yq \
-        asciidoctor \
-        bash-completion \
         build-essential \
         htop \
         jq \
@@ -15,7 +13,6 @@ RUN apt-get install -yq \
         nano \
         software-properties-common \
         sudo \
-        vim \
     && locale-gen en_US.UTF-8 \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
 ENV LANG=en_US.UTF-8
