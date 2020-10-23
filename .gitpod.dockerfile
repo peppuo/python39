@@ -1,14 +1,6 @@
 FROM buildpack-deps:latest 
 ### cosmic
 
-### base ###
-RUN yes | unminimize \
-    && apt-get install -yq \
-        nano \
-        sudo \
-    && locale-gen en_US.UTF-8 \
-    && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
-ENV LANG=en_US.UTF-8
 
 ### Gitpod user ###
 # '-l': see https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#user
