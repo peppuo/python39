@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 ### Python ###
 RUN sudo apt update -y \
     && sudo apt-get install -y software-properties-common \
-    && sudo add-apt-repository ppa:fkrull/deadsnakes \
+#     && sudo add-apt-repository ppa:fkrull/deadsnakes \
     && sudo apt update -y \
     && sudo apt install python3.9
     
