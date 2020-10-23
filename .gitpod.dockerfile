@@ -2,8 +2,8 @@ FROM gitpod/workspace-full:latest
 
 # Use root user
 USER root
+RUN echo "Set disable_coredump false" >> /etc/sudo.conf
 RUN apt-get update && apt-get install -y \
-    && echo "Set disable_coredump false" >> /etc/sudo.conf
     # Clean-up
     && sudo apt-get clean \
     && sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/*
